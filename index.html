@@ -199,13 +199,47 @@
 
   <!-- ============ ZAHLEN ============ -->
   <section class="stats">
-    <div class="stats-contours" aria-hidden="true">
-      <svg viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice">
-        <g fill="none" stroke="currentColor" stroke-width="1">
-          <path d="M-40 90 C 300 30, 620 140, 940 80 S 1360 40, 1480 90"/>
-          <path d="M-40 170 C 320 110, 640 220, 960 160 S 1380 120, 1480 170"/>
-          <path d="M-40 250 C 340 190, 660 300, 980 240 S 1400 200, 1480 250"/>
-          <path d="M-40 330 C 360 270, 680 380, 1000 320 S 1420 280, 1480 330"/>
+    <div class="stats-liana" aria-hidden="true">
+      <svg class="liana-top" viewBox="0 0 1440 140" preserveAspectRatio="xMidYMin slice">
+        <defs>
+          <path id="leaf" d="M0 0 C 7 -16, 26 -22, 38 -8 C 28 6, 9 8, 0 0 Z"/>
+          <path id="curl" d="M0 0 C 12 -3 20 -10 18 -19 C 16 -27 6 -27 5 -19 C 4 -13 11 -10 15 -14" fill="none"/>
+        </defs>
+        <path class="liana-stem" pathLength="1" d="M-20 20 Q 110 92 240 30 Q 310 -2 380 24 Q 510 96 640 32 Q 705 4 780 26 Q 905 98 1040 34 Q 1110 6 1190 26 Q 1310 94 1460 28"/>
+        <g class="liana-leaves">
+          <g transform="translate(110 59) rotate(150)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(58 46) rotate(115) scale(0.7)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(240 30) rotate(-35) scale(0.8)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(310 13) rotate(-75) scale(0.7)"><use href="#curl" class="lf"/></g>
+          <g transform="translate(510 62) rotate(160)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(444 52) rotate(120) scale(0.75)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(640 32) rotate(-30) scale(0.85)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(708 17) rotate(-70) scale(0.75)"><use href="#curl" class="lf"/></g>
+          <g transform="translate(908 64) rotate(155)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(842 56) rotate(115) scale(0.7)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(1040 34) rotate(-32) scale(0.8)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(1113 18) rotate(-72) scale(0.75)"><use href="#curl" class="lf"/></g>
+          <g transform="translate(1318 61) rotate(158) scale(0.95)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(1250 52) rotate(120) scale(0.7)"><use href="#leaf" class="lf"/></g>
+        </g>
+      </svg>
+      <svg class="liana-bottom" viewBox="0 0 1440 140" preserveAspectRatio="xMidYMax slice">
+        <path class="liana-stem stem-2" pathLength="1" d="M-20 122 Q 110 48 240 110 Q 310 142 380 116 Q 510 44 640 108 Q 705 136 780 114 Q 905 42 1040 106 Q 1110 134 1190 114 Q 1310 46 1460 112"/>
+        <g class="liana-leaves">
+          <g transform="translate(110 81) rotate(-25)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(180 74) rotate(-60) scale(0.7)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(240 110) rotate(155) scale(0.8)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(312 128) rotate(110) scale(0.7)"><use href="#curl" class="lf"/></g>
+          <g transform="translate(510 78) rotate(-20)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(578 72) rotate(-55) scale(0.75)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(640 108) rotate(150) scale(0.85)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(710 125) rotate(105) scale(0.75)"><use href="#curl" class="lf"/></g>
+          <g transform="translate(908 76) rotate(-25)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(975 71) rotate(-58) scale(0.7)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(1040 106) rotate(152) scale(0.8)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(1114 123) rotate(108) scale(0.75)"><use href="#curl" class="lf"/></g>
+          <g transform="translate(1318 79) rotate(-22) scale(0.95)"><use href="#leaf" class="lf"/></g>
+          <g transform="translate(1386 72) rotate(-58) scale(0.7)"><use href="#leaf" class="lf"/></g>
         </g>
       </svg>
     </div>
@@ -249,65 +283,81 @@
       <p class="eyebrow reveal">Kundenstimmen</p>
       <h2 class="reveal">5,0 von 5 — das sagen unsere Kunden</h2>
       <p class="section-lead reveal d1">Alle Rezensionen stammen von Google und sind dort öffentlich nachlesbar.</p>
-      <div class="review-grid">
-        <blockquote class="review reveal">
-          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
-          <p>„Professionelle Arbeit zu gutem Preis. Gute Kommunikation — freundlicher,
-          schneller Kontakt. Weiter so&nbsp;…“</p>
-          <footer><strong>Harald S.</strong> · Rezension aus Google</footer>
-        </blockquote>
-        <blockquote class="review reveal">
-          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
-          <p>„Jungunternehmer der verantwortungsvoll und gewissenhaft seinen Auftrag erledigt.
-          Geht jederzeit auf Rückfragen ein und verrichtet qualitative Arbeit. Gerne wieder!“</p>
-          <footer><strong>Benni G.</strong> · Rezension aus Google</footer>
-        </blockquote>
-        <blockquote class="review reveal">
-          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
-          <p>„Wir sind rundum zufrieden mit der Arbeit von Garten- &amp; Landschaftsbau Braun und können
-          eine klare Empfehlung aussprechen. Max, ein engagierter Jungunternehmer, überzeugt nicht nur
-          fachlich, sondern auch menschlich: Er ist stets freundlich, zuvorkommend und jederzeit
-          hilfsbereit. Man merkt sofort, dass er mit viel Einsatz und Leidenschaft bei der Sache ist.</p>
-          <p>Bei uns hat er einen ca. 20 Meter langen Kabelgraben vom Haus bis zur Garage ausgehoben,
-          sodass im Anschluss der Elektriker problemlos die Leitungen verlegen konnte. Trotz
-          unerwarteter Herausforderungen während der Arbeiten hat Max stets lösungsorientiert
-          gehandelt und mit großem Engagement das bestmögliche Ergebnis erzielt.</p>
-          <p>Vielen Dank für den starken Einsatz! Bei zukünftigen Projekten kommen wir sehr gerne
-          wieder auf ihn zurück und können ihn uneingeschränkt weiterempfehlen.“</p>
-          <footer><strong>Phil B.</strong> · Rezension aus Google</footer>
-        </blockquote>
-        <blockquote class="review reveal">
-          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
-          <p>„Saubere Arbeiten zu einem sehr fairen Preis, dazu jederzeit freundlich.
-          Kann man absolut empfehlen!“</p>
-          <footer><strong>Ka V.</strong> · Rezension aus Google</footer>
-        </blockquote>
-        <blockquote class="review reveal">
-          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
-          <p>„Wir sind absolut begeistert von der Arbeit dieses Gala-Betriebs Braun! Von der ersten
-          Beratung bis zur finalen Umsetzung lief alles professionell, zuverlässig und termingerecht.
-          Unsere Terrasse ist wunderschön geworden, die Wiese wurde perfekt angelegt, die Hecke sauber
-          und fachgerecht gepflanzt, und auch der Stellplatz sowie der Zaun wurden exakt nach unseren
-          Vorstellungen umgesetzt.</p>
-          <p>Besonders hervorheben möchten wir die sorgfältige Arbeitsweise, die hohe Qualität der
-          Materialien und die freundliche, kompetente Kommunikation während des gesamten Projekts.
-          Das Team war stets pünktlich, ordentlich und sehr engagiert.</p>
-          <p>Wir können diesen Betrieb uneingeschränkt weiterempfehlen und würden jederzeit wieder
-          mit ihm zusammenarbeiten. Vielen Dank für die tolle Arbeit!“</p>
-          <footer><strong>S. W.</strong> · Rezension aus Google</footer>
-        </blockquote>
-        <blockquote class="review reveal">
-          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
-          <p>„Sehr ordentlich und sehr sauber gearbeitet, ich habe keinen Fehler gesehen,
-          obwohl ich Architekt bin 👍“</p>
-          <footer><strong>Yasser A.</strong> · Rezension aus Google</footer>
-        </blockquote>
-        <blockquote class="review reveal">
-          <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
-          <p>„Zuverlässig, faire Preise, top Ausführung. Schnelle flexible Reaktion.
-          Junges Unternehmen mit Elan und Know-how.“</p>
-          <footer><strong>S. S.</strong> · Rezension aus Google</footer>
-        </blockquote>
+      <div class="review-viewport reveal" id="reviewViewport">
+        <div class="review-track" id="reviewTrack">
+          <blockquote class="review">
+            <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+            <div class="review-body">
+              <p>„Professionelle Arbeit zu gutem Preis. Gute Kommunikation — freundlicher,
+              schneller Kontakt. Weiter so&nbsp;…“</p>
+            </div>
+            <footer><strong>Harald S.</strong> · Rezension aus Google</footer>
+          </blockquote>
+          <blockquote class="review">
+            <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+            <div class="review-body">
+              <p>„Jungunternehmer der verantwortungsvoll und gewissenhaft seinen Auftrag erledigt.
+              Geht jederzeit auf Rückfragen ein und verrichtet qualitative Arbeit. Gerne wieder!“</p>
+            </div>
+            <footer><strong>Benni G.</strong> · Rezension aus Google</footer>
+          </blockquote>
+          <blockquote class="review">
+            <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+            <div class="review-body">
+              <p>„Wir sind rundum zufrieden mit der Arbeit von Garten- &amp; Landschaftsbau Braun und können
+              eine klare Empfehlung aussprechen. Max, ein engagierter Jungunternehmer, überzeugt nicht nur
+              fachlich, sondern auch menschlich: Er ist stets freundlich, zuvorkommend und jederzeit
+              hilfsbereit. Man merkt sofort, dass er mit viel Einsatz und Leidenschaft bei der Sache ist.</p>
+              <p>Bei uns hat er einen ca. 20 Meter langen Kabelgraben vom Haus bis zur Garage ausgehoben,
+              sodass im Anschluss der Elektriker problemlos die Leitungen verlegen konnte. Trotz
+              unerwarteter Herausforderungen während der Arbeiten hat Max stets lösungsorientiert
+              gehandelt und mit großem Engagement das bestmögliche Ergebnis erzielt.</p>
+              <p>Vielen Dank für den starken Einsatz! Bei zukünftigen Projekten kommen wir sehr gerne
+              wieder auf ihn zurück und können ihn uneingeschränkt weiterempfehlen.“</p>
+            </div>
+            <footer><strong>Phil B.</strong> · Rezension aus Google</footer>
+          </blockquote>
+          <blockquote class="review">
+            <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+            <div class="review-body">
+              <p>„Saubere Arbeiten zu einem sehr fairen Preis, dazu jederzeit freundlich.
+              Kann man absolut empfehlen!“</p>
+            </div>
+            <footer><strong>Ka V.</strong> · Rezension aus Google</footer>
+          </blockquote>
+          <blockquote class="review">
+            <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+            <div class="review-body">
+              <p>„Wir sind absolut begeistert von der Arbeit dieses Gala-Betriebs Braun! Von der ersten
+              Beratung bis zur finalen Umsetzung lief alles professionell, zuverlässig und termingerecht.
+              Unsere Terrasse ist wunderschön geworden, die Wiese wurde perfekt angelegt, die Hecke sauber
+              und fachgerecht gepflanzt, und auch der Stellplatz sowie der Zaun wurden exakt nach unseren
+              Vorstellungen umgesetzt.</p>
+              <p>Besonders hervorheben möchten wir die sorgfältige Arbeitsweise, die hohe Qualität der
+              Materialien und die freundliche, kompetente Kommunikation während des gesamten Projekts.
+              Das Team war stets pünktlich, ordentlich und sehr engagiert.</p>
+              <p>Wir können diesen Betrieb uneingeschränkt weiterempfehlen und würden jederzeit wieder
+              mit ihm zusammenarbeiten. Vielen Dank für die tolle Arbeit!“</p>
+            </div>
+            <footer><strong>S. W.</strong> · Rezension aus Google</footer>
+          </blockquote>
+          <blockquote class="review">
+            <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+            <div class="review-body">
+              <p>„Sehr ordentlich und sehr sauber gearbeitet, ich habe keinen Fehler gesehen,
+              obwohl ich Architekt bin 👍“</p>
+            </div>
+            <footer><strong>Yasser A.</strong> · Rezension aus Google</footer>
+          </blockquote>
+          <blockquote class="review">
+            <span class="stars" aria-label="5 von 5 Sternen">★★★★★</span>
+            <div class="review-body">
+              <p>„Zuverlässig, faire Preise, top Ausführung. Schnelle flexible Reaktion.
+              Junges Unternehmen mit Elan und Know-how.“</p>
+            </div>
+            <footer><strong>S. S.</strong> · Rezension aus Google</footer>
+          </blockquote>
+        </div>
       </div>
     </div>
   </section>

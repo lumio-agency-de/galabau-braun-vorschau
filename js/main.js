@@ -53,6 +53,36 @@
     probe.src = src;
   });
 
+  /* Kundenstimmen: „Mehr lesen" + Endlos-Lauf (links rein, rechts raus) */
+  var track = document.getElementById('reviewTrack');
+  if (track) {
+    Array.prototype.forEach.call(track.querySelectorAll('.review'), function (card) {
+      var body = card.querySelector('.review-body');
+      if (!body) return;
+      if (body.scrollHeight > body.clientHeight + 4) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'review-more';
+        btn.textContent = 'Mehr lesen';
+        card.insertBefore(btn, card.querySelector('footer'));
+      }
+    });
+    if (!reduce) {
+      track.innerHTML += track.innerHTML;
+      for (var d = track.children.length / 2; d < track.children.length; d++) {
+        track.children[d].setAttribute('aria-hidden', 'true');
+      }
+    }
+    track.addEventListener('click', function (ev) {
+      var btn = ev.target.closest ? ev.target.closest('.review-more') : null;
+      if (!btn) return;
+      var card = btn.closest('.review');
+      var open = card.classList.toggle('expanded');
+      btn.textContent = open ? 'Weniger anzeigen' : 'Mehr lesen';
+      track.classList.toggle('paused', !!track.querySelector('.review.expanded'));
+    });
+  }
+
   /* Reveal on scroll */
   var revs = document.querySelectorAll('.reveal');
   if (reduce || !('IntersectionObserver' in window)) {
@@ -97,6 +127,21 @@
     Array.prototype.forEach.call(nums, function (el) { ioNum.observe(el); });
   } else {
     Array.prototype.forEach.call(nums, runCount);
+  }
+
+  /* Liane im Statistik-Band wächst beim Reinscrollen */
+  var statsBand = document.querySelector('.stats');
+  if (statsBand) {
+    if (reduce || !('IntersectionObserver' in window)) {
+      statsBand.classList.add('grow');
+    } else {
+      var ioLiana = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { statsBand.classList.add('grow'); ioLiana.unobserve(statsBand); }
+        });
+      }, { threshold: 0.25 });
+      ioLiana.observe(statsBand);
+    }
   }
 
   /* Leichter Parallax auf Hero-/Kontakt-Bildern */

@@ -32,8 +32,8 @@
       burger.setAttribute('aria-expanded', String(open));
       burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     });
-    Array.prototype.forEach.call(document.querySelectorAll('.js-close'), function (a) {
-      a.addEventListener('click', closeMenu);
+    links.addEventListener('click', function (ev) {
+      if (ev.target.closest && ev.target.closest('a')) closeMenu();
     });
   }
 

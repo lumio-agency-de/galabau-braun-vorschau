@@ -129,21 +129,6 @@
     Array.prototype.forEach.call(nums, runCount);
   }
 
-  /* Liane im Statistik-Band wächst beim Reinscrollen */
-  var statsBand = document.querySelector('.stats');
-  if (statsBand) {
-    if (reduce || !('IntersectionObserver' in window)) {
-      statsBand.classList.add('grow');
-    } else {
-      var ioLiana = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { statsBand.classList.add('grow'); ioLiana.unobserve(statsBand); }
-        });
-      }, { threshold: 0.25 });
-      ioLiana.observe(statsBand);
-    }
-  }
-
   /* Leichter Parallax auf Hero-/Kontakt-Bildern */
   var layers = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
   if (!reduce && layers.length) {
